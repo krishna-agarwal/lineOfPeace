@@ -1,0 +1,215 @@
+body{
+	margin: 0px;
+	padding : 0px;
+	background-color: #fafafa;
+	font-family : 'Roboto', sans-serif;
+}
+.login md-card {
+    width: 400px;
+}
+
+.login .logo {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+}
+.header{
+	width: 100%;
+	height : 7vh;
+	background-color: #ffffff !important;
+    border: none !important;
+    box-shadow: 1px -1px 4px #989898;
+    text-align: center;
+}
+
+.logo > a{
+    cursor : default !important;
+    border : 0px !important;
+    padding : 5px 0px !important;
+}
+
+.logo>a:hover{
+    border : 0px;
+}
+.nav-tabs{
+    background-color: #ffffff !important;
+    border : none !important;
+    box-shadow: 1px -1px 4px #989898;
+}
+.nav-tabs>li {
+    background-color: #ffffff !important;
+}
+.nav-tabs>li:nth-child(1) {
+    margin-right: 30px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 2px solid #e82e4e;
+    border-color: #e82e4e !important;
+    color: #e82e4e !important;
+    font-family: 'Exo',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar)
+{
+    background-color: #e82e4e !important;
+}
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input, md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: #e82e4e !important;
+}
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused label, md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: #e82e4e !important;
+}
+.md-button.md-default-theme.md-primary, .md-button.md-primary
+{
+    color: #e82e4e;
+}
+.nav-tabs>li>a {
+    padding: 22px 22px 10px 22px;
+    font-family: 'Exo',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #163d64;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #e82e4e;
+}
+.nav>li.disabled>a {
+    padding: 0px !important;
+}
+.nav-tabs>li {
+    margin-bottom: 0px;
+}
+
+.addSubjectBtn{
+    position: absolute !important;
+    background-color: #e82e4e !important;
+    color:  #fff !important;
+    right: 140px;
+    top: 1.2vh;
+    padding: 0px 15px !important;
+}
+.addTagtBtn{
+    position: absolute !important;
+    background-color: #e82e4e !important;
+    color:  #fff !important;
+    right: 10px;
+    top: 1.2vh;
+    padding: 0px 15px !important;
+}
+.btn-prim
+{
+    background-color: #e82e4e !important;
+    padding: 0px 15px !important;
+}
+.chapterList md-list-item {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+.leftContainer {
+    position: absolute;
+    left: 0;
+    top: 8.1vh;
+    width: 20%;
+    height: 90vh;
+    border-right: 2px solid #eaeaea;
+    text-align: center;
+}
+.chapterList{
+    height: 80vh !important;
+    overflow: scroll !important;
+    padding: 0px !important;
+}
+.selectedArticleIndex{
+    background-color: #e82e4e !important;
+    color: #fff;
+}
+
+.rightContainer {
+    position: absolute;
+    left: 20%;
+    right: 0;
+    top: 10vh;
+    height: 90vh;
+    padding: 10px 30px;
+}
+.topicHeader{
+    text-align: center;
+}
+
+md-select{
+    display: inline-block !important;
+    text-align: left !important;
+    width: 300px;
+}
+
+.cardsListContainer{
+    display: -webkit-box;
+}
+.dataCardList{
+    width: 50%;
+}
+.exerciseCardList{
+    width: 50%;
+}
+
+.cardsListContainer .cardBtn{
+    background-color: #e82e4e !important;
+    color:  #fff !important;
+}
+.cardWrapper{
+    display: flex;
+}
+.cardContainer{
+    width: 60%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+.cardPreviewContainer{
+    margin-left: 5%;
+    width: 270px;
+    height: 68vh;
+    padding: 10px;
+    text-align: center;
+    background-image: url("../res/images/device.jpg");
+    background-size: 100% 100%;
+}
+.priview{
+    background-color: #fff;
+    width: 244px;
+    height: 95%;
+    margin: auto;
+    margin-top: 13%;
+}
+.previewText{
+    text-align: left;
+    width: 90%;
+    margin : auto;
+}
+.cardImage{
+    width: 80%;
+    height: 20%;
+}
+
+.ta-editor.ta-html, .ta-scroll-window.form-control{
+    min-height: 300px !important;
+}
+.ta-editor.ta-html, .ta-scroll-window.form-control{
+    height: 300px !important;
+    margin-top: 10px; 
+}
+.md-whiteframe-4dp
+{
+    margin-top: 10%;
+}
+.loginlogo
+{
+    margin-top: 10px;
+}
+

@@ -1,0 +1,64 @@
+<div class="header">
+	<uib-tabset active="activeTab"  ng-cloak>
+		<uib-tab index="0" class="logo"  disable="true">
+			<uib-tab-heading>
+				<img id="logo" src="res/images/logo.png">
+			</uib-tab-heading>
+		</uib-tab>
+		
+		<uib-tab ng-repeat="interest in interests" repeat-end="onEnd()" index="$index+1" select="interestChange(interest.name)">
+			<uib-tab-heading>
+				{{interest.name}} 
+			</uib-tab-heading>
+		</uib-tab>					
+			<md-button class="md-raised md-accent addSubjectBtn" ng-click="addInterestPrompt($event)">
+				<i class="fa fa-plus"></i> Add Interest
+	        </md-button>
+			<md-button class="md-raised md-primary addTagtBtn" ng-click="addTagPrompt($event)">
+				<i class="fa fa-plus"></i> Add Tags
+	        </md-button>
+	</uib-tabset>
+
+</div>
+
+<div class="mainContainer">
+	<div class="leftContainer">
+		<div layout="row" layout-sm="column" layout-align="space-around" style="margin-top:40vh" ng-show="loadingArticles">
+	      	<md-progress-circular md-mode="indeterminate"></md-progress-circular>
+	    </div>
+		<md-list class="chapterList" flex>
+			<md-list-item class="md-2-line" ng-repeat="article in articles" ng-class="{selectedArticleIndex: selectedArticleIndex===$index}" ng-click="articleChange(article.title,$index)">
+				<h4>{{article.title}}</h4>
+			</md-list-item>			
+		</md-list>
+		<md-button class="md-raised md-primary btn-prim" ng-click="addArticlePrompt($event)"><i class="fa fa-plus"></i> Add Article</md-button>
+	</div>
+	<div class="rightContainer" ng-show="currentArticle">
+		<div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Title</label>
+            <input ng-model="article.title">
+          </md-input-container>
+
+          <md-select placeholder="tags" ng-model="article.tags" multiple="true" class="md-block" flex-gt-sm>
+		    <md-option ng-value="tag._id" ng-repeat="tag in tags">{{tag.name}}</md-option>
+		  </md-select>
+
+        </div>
+        <div layout-gt-xs="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Image</label>
+            <input ng-model="article.image">
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Image Title</label>
+            <input ng-model="article.image_title">
+          </md-input-container>
+        </div>
+        <div text-angular ta-toolbar="[['h1','h2','p'],['bold','italics','underline','ul', 'ol'],['justifyLeft', 'justifyCenter', 'justifyRight'],['wordcount', 'charcount']]" ng-model="article.body"></div>
+        <div style="text-align: right;margin-top:10px;">
+	        <md-button class="md-raised md-primary btn-prim" ng-click="updateArticle()">Save</md-button>
+        </div>
+    
+	</div>
+</div>
